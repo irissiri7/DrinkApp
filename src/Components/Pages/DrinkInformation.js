@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import drinks from '../../Data/drinks.json';
 import { useParams } from 'react-router-dom';
-import PageNotFound from '../PageNotFound';
-import {StyledLink, Container, StyledLink404Page} from '../../Styles/DrinkInformationStyles';
-
-
+import PageNotFound from './PageNotFound';
+import {StyledLink, Container} from '../../Styles/DrinkInformationStyles';
 
 
 const DrinkInformation = () => {
@@ -46,9 +44,7 @@ const DrinkInformation = () => {
     
     return(
         <div>
-            {error ? <PageNotFound/> : displayInformation()}
-            {error && <StyledLink404Page to='/explorer'>Go back</StyledLink404Page>}
-            
+            {error ? <PageNotFound page='/explorer'/> : displayInformation()}  
         </div>
     )
 }

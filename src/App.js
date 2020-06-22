@@ -4,7 +4,7 @@ import Home from './Components/Pages/Home';
 import Explore from './Components/Pages/Explore';
 import Navigation from './Components/Navigation';
 import DrinkInformation from './Components/Pages/DrinkInformation';
-import PageNotFound from './Components/PageNotFound';
+import PageNotFound from './Components/Pages/PageNotFound';
 
 const App = () => {
   

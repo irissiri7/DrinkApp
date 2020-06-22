@@ -43,7 +43,7 @@ const Explorer = () =>{
             <StyledDrinkContainer>
                 {generateDrinkResult()}
             </StyledDrinkContainer>
-            {notFound && <p>Not found</p>}
+            {notFound && <p>No such drink found!</p>}
         </div>
         
 
