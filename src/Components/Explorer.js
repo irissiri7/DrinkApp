@@ -12,7 +12,6 @@ const StyledDrinkContainer = styled.div`
 
 const Explorer = () =>{
     const [drinks, setDrinks] = useState([]);
-    const [hasSearched, setHasSearched] = useState(false);
 
 
     const search = (e) => {
@@ -20,7 +19,10 @@ const Explorer = () =>{
         const search = document.getElementById('searchInput').value;
         document.getElementById('searchInput').value = '';
         
-        setDrinks(drinksData.cocktails.filter(item => item.name.includes(search)));
+        setDrinks(drinksData.cocktails.filter(item => {
+            const drinkName = item.name.toLowerCase();
+            return drinkName.includes(search.toLowerCase());
+        }));
     }
 
     const generateDrinkResult = () =>{
@@ -37,7 +39,6 @@ const Explorer = () =>{
             <StyledDrinkContainer>
                 {generateDrinkResult()}
             </StyledDrinkContainer>
-            {hasSearched && <p>No result</p>}
         </div>
         
 
