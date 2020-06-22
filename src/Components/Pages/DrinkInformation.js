@@ -1,28 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import drinks from '../Data/drinks.json';
-import { useParams, Link } from 'react-router-dom';
-import PageNotFound from './PageNotFound';
-import styled from 'styled-components';
+import drinks from '../../Data/drinks.json';
+import { useParams } from 'react-router-dom';
+import PageNotFound from '../PageNotFound';
+import {StyledLink, Container, StyledLink404Page} from '../../Styles/DrinkInformationStyles';
 
-const StyledLink = styled(Link)`
-    display: block;
-    color: rgb(96, 145, 128);
-    text-decoration-line: none;
-    padding: 2%;
-    margin: 0;
 
-    &:hover{
-        background-color: rgb(96, 145, 128);
-        color: white;
-    }
-`;
 
-const Container = styled.div`
-    display: flex;
-    justify-content: space-around;
-`;
 
-const DrinkPage = () => {
+const DrinkInformation = () => {
     const search = useParams();
     const [name, setName] = useState();
     const [img, setImg] = useState();
@@ -62,10 +47,10 @@ const DrinkPage = () => {
     return(
         <div>
             {error ? <PageNotFound/> : displayInformation()}
-            {error && <StyledLink to='/explorer'>Go back</StyledLink>}
+            {error && <StyledLink404Page to='/explorer'>Go back</StyledLink404Page>}
             
         </div>
     )
 }
 
-export default DrinkPage;
+export default DrinkInformation;

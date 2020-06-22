@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Home from './Components/Home';
-import Explore from './Components/Explore';
+import Home from './Components/Pages/Home';
+import Explore from './Components/Pages/Explore';
 import Navigation from './Components/Navigation';
-import DrinkPage from './Components/DrinkPage';
+import DrinkInformation from './Components/Pages/DrinkInformation';
 import PageNotFound from './Components/PageNotFound';
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <Switch>
           <Route path='/' component={Home} exact/>
           <Route path='/explorer' component={Explore} />
-          <Route path='/drinkpage/:name' component={DrinkPage}/>
+          <Route path='/drinkpage/:name' component={DrinkInformation}/>
           <Route path='/' component={PageNotFound}/>
         </Switch>
       </div>

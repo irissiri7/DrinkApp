@@ -1,38 +1,7 @@
 import React, {useState} from 'react';
-import DrinkCard from './DrinkCard';
-import drinksData from '../Data/drinks.json';
-import styled from 'styled-components';
-
-const StyledDrinkContainer = styled.div`
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-`;
-const StyledInput = styled.input`
-    display: block;
-    margin: 0 auto;
-    width: 20%;
-    border-radius: 5px;
-    border: 0.5px solid grey;
-    padding: 1em;
-
-`;
-
-const StyledButton = styled.button`
-    display: block;
-    margin: 0 auto;
-    padding: 1em;
-    width: 15%;
-    margin-top: 1em;
-    border-radius: 5px;
-    border: none;
-    background-color: #7B435B;
-    color: white;
-    font-family: 'Raleway', sans-serif;
-
-`;
+import DrinkCard from '../DrinkCard';
+import drinksData from '../../Data/drinks.json';
+import {StyledDrinkContainer, StyledInput, StyledButton} from '../../Styles/ExploreStyles';
 
 
 const Explorer = () =>{

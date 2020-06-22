@@ -1,22 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import styled from 'styled-components';
+import {StyledLink, StyledContainer} from '../Styles/DrinkCardStyles';
 
-const StyledLink = styled(Link)`
-    display: block;
-    color: rgb(96, 145, 128);
-    text-decoration-line: none;
-    padding: 2%;
 
-    &:hover{
-        background-color: rgb(96, 145, 128);
-        color: white;
-    }
-`;
 
-const StyledContainer = styled.div`
-    margin: 2%;
-`;
 
 const DrinkCard = ({name, src}) => {
     return (
