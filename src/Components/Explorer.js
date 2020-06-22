@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import DrinkCard from './DrinkCard';
 import drinksData from '../Data/drinks.json';
 import styled from 'styled-components';
@@ -8,7 +8,31 @@ const StyledDrinkContainer = styled.div`
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 `;
+const StyledInput = styled.input`
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    border-radius: 5px;
+    border: 0.5px solid grey;
+    padding: 0.5em;
+
+`;
+
+const StyledButton = styled.button`
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em;
+    width: 15%;
+    margin-top: 1em;
+    border-radius: 5px;
+    border: none;
+    background-color: #7B435B;
+    color: white;
+
+`;
+
 
 const Explorer = () =>{
     const [drinks, setDrinks] = useState([]);
@@ -44,8 +68,9 @@ const Explorer = () =>{
     return (
         <div>
             <h1>Explorer</h1>
-            <input type="text" id="searchInput"/>
-            <button onClick={search}>Search</button>
+                <h2>Find your favourite!</h2>
+                <StyledInput type="text" id="searchInput"/>
+                <StyledButton onClick={search}>Search</StyledButton>
             <StyledDrinkContainer>
                 {generateDrinkResult()}
             </StyledDrinkContainer>

@@ -11,6 +11,7 @@ const DrinkPage = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
+        console.log(search)
         try{
             const drink = drinks.cocktails.find(item => item.name.toLowerCase() === search.name);
             setName(drink.name);
