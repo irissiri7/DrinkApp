@@ -14,15 +14,24 @@ const StyledImg = styled.img`
     object-fit: cover;
 `;
 
+const StyledQuote = styled.blockquote`
+    margin: 3%;
+    margin-bottom: 1%;
+`;
+
 
 const Home = () => {
     return (
     <div>
-        <h1>Home</h1>
-        <h2>Welcome to the wonderful world of drinks!</h2>
+        <h1>Welcome to the Cocktail Explorer!</h1>
         <StyledImgContainer>
-            <StyledImg src={require('../Images/bkg.jpg')}/>
+            <StyledImg src={require('../Images/bkg2.jpg')}/>
         </StyledImgContainer>
+        <StyledQuote cite="https://drinkade.com/blogs/news/35-famous-drinking-quotes">
+            ”I feel bad for people who don’t drink. When they wake up in the morning, 
+            that’s as good as they’re going to feel all day.”
+        </StyledQuote>
+        <p>- Frank Sinatra</p>
     </div>
     )
 }

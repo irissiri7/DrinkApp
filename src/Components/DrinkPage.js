@@ -2,6 +2,18 @@ import React, { useEffect, useState } from 'react';
 import drinks from '../Data/drinks.json';
 import { useParams, Link } from 'react-router-dom';
 import PageNotFound from './PageNotFound';
+import styled from 'styled-components';
+
+const StyledLink = styled(Link)`
+    color: rgb(96, 145, 128);
+    text-decoration-line: none;
+    padding: 0px 20px;
+
+    &:hover{
+        background-color: rgb(96, 145, 128);
+        color: white;
+    }
+`;
 
 const DrinkPage = () => {
     const search = useParams();
@@ -39,7 +51,7 @@ const DrinkPage = () => {
     return(
         <div>
             {error ? <PageNotFound/> : displayInformation()}
-            <Link to='/explorer'>Go back</Link>
+            <StyledLink to='/explorer'>Go back</StyledLink>
         </div>
     )
 }
