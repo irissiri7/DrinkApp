@@ -1,7 +1,12 @@
 import React from 'react';
 
-const DrinkCard = () =>{
-    return <h1>DrinkCard</h1>
+const DrinkCard = ({name, src}) =>{
+    return (
+        <div>
+            <p>{name}</p>
+            <img src={src}/>
+        </div>
+    )
 }
 
 export default DrinkCard;
